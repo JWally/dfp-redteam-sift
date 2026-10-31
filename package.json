@@ -1,0 +1,9 @@
+{
+  "name": "dfp-redteam-sift",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Sift sensor hunt (2026-10-31): no live deployment found this pass — probes documented, next steps defined",
+  "scripts": { "probe": "node scripts/sift-probe.mjs" },
+  "dependencies": { "playwright": "^1" }
+}
