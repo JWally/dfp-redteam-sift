@@ -70,6 +70,28 @@ server-owned identity).
 - 🟢 Tamper with payload: every field editable; forged values accepted
 - 🟢 Mint token: fresh device UUID + session minted; collector returns 200 + GIF
 
+## Demo video — the forged identity accepted
+
+**Watch the capture** (terminal capture of `scripts/sift-demo.sh` — mints a
+fresh device UUID + forged fingerprints, sends to the collector, HTTP 200 +
+`GIF89a`):
+
+<img src="assets/videos/full-payload-demo.gif" width="720" alt="Sift forge demo" />
+
+<video controls preload="metadata" width="720"><source src="assets/videos/full-payload-demo.mp4" type="video/mp4"></video>
+
+Reproduce it yourself:
+
+```bash
+node scripts/sift-forge-harness.mjs
+bash scripts/sift-demo.sh
+```
+
+Full detail: [SIFT_FORGERY_2026_11_01.md](SIFT_FORGERY_2026_11_01.md) ·
+real captured beacons: [ksl-full-pixel.txt](artifacts/ksl-full-pixel.txt),
+[depop-full-pixel.txt](artifacts/depop-full-pixel.txt)
+[Download the mp4](https://raw.githubusercontent.com/JWally/dfp-redteam-sift/main/assets/videos/full-payload-demo.mp4)
+
 ## Files
 
 - `scripts/sift-forge.mjs`, `scripts/sift-forge-harness.mjs` — the forge harness
